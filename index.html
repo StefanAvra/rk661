@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Radio RK 661</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📻</text></svg>"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>World Band Receiver RK 661</div>
+            <div>
+                <label for="toggle-color">b/w</label>
+                <input type="checkbox" id="toggle-color" />
+            </div>
+        </header>
+        <main>
+            <div class="radio">
+                <div class="speaker-container">
+                    <div class="speaker-grill"></div>
+                    <div class="brand">Siemens</div>
+                    <div class="model-no">RK 661</div>
+                </div>
+                <div class="ui-container">
+                    <div class="display-lens">
+                        <div class="display-btns">
+                            <button id="sleep-btn" class="time-btn"></button>
+                            <label for="sleep-btn">sleep</label>
+                            <button id="time-set" class="time-btn"></button>
+                            <label for="time-set">time<br />set</label>
+                            <button
+                                id="dual-time-show"
+                                class="time-btn"
+                            ></button>
+                            <label for="dual-time-show">dual</label>
+                            <button
+                                id="dual-time-set"
+                                class="time-btn"
+                            ></button>
+                            <label for="dual-time-set">time</label>
+                        </div>
+
+                        <div class="lcd"></div>
+                    </div>
+                    <div class="btns-container">
+                        <div class="band-selectors">
+                            <label for="fm">fm</label>
+                            <button id="fm"></button>
+                            <label for="lw">lw</label>
+                            <button id="lw"></button>
+                            <label for="mw">mw</label>
+                            <button id="mw"></button>
+                            <label for="sw">sw</label>
+                            <button id="sw"></button>
+                        </div>
+                        <div class="numeric-btns">
+                            <button id="one">1</button>
+                            <button id="two">2</button>
+                            <button id="three">3</button>
+                            <button id="four">4</button>
+                            <button id="five">5</button>
+                            <button id="six">6</button>
+                            <button id="seven">7</button>
+                            <button id="eight">8</button>
+                            <button id="nine">9</button>
+                            <button id="zero">0</button>
+                            <button id="dot">.</button>
+                            <button id="correct">c</button>
+                            <button id="memory">M</button>
+                            <button id="enter">enter</button>
+                        </div>
+                        <div class="freq-btns">
+                            <button class="tune-up"></button>
+                            <button class="tune-down"></button>
+                            <button class="standby">standby</button>
+                            <button class="freq">freq</button>
+                            <button class="meter">meter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>this is footer</footer>
+    </body>
+</html>

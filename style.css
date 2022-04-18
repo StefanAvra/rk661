@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border: 1px solid black;
+    --label-color: goldenrod;
+}
+
+body {
+    background-color: rgb(255, 247, 241);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    height: 3em;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em;
+}
+
+main {
+    display: flex;
+    place-content: center;
+}
+
+label {
+    font-size: 0.6em;
+    color: var(--label-color);
+}
+
+button {
+    appearance: none;
+    border: var(--border);
+    background-color: transparent;
+}
+
+.radio {
+    border: var(--border);
+    height: 25em;
+    width: 42em;
+    border-radius: 0.5em;
+    display: flex;
+}
+.speaker-container {
+    width: 45%;
+    display: grid;
+    grid-template-areas:
+        "a a"
+        "b c";
+    gap: 1em;
+    margin: 1em 1.5em 1.5em 1.5em;
+}
+.speaker-grill {
+    height: 20em;
+    grid-area: a;
+    background-image: radial-gradient(
+        hsla(0, 0%, 0%, 0.6) 1px,
+        transparent 1px
+    );
+    background-size: 4px 4px;
+}
+.brand {
+    grid-area: b;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.model-no {
+    font-size: 0.8em;
+    text-align: right;
+    grid-area: c;
+}
+
+.ui-container {
+    width: 45%;
+    margin: 0.5em 1.5em 1.5em 0.5em;
+}
+
+.display-lens {
+    border: 1px black solid;
+    border-radius: 0.5em;
+    height: 8em;
+    display: flex;
+    padding: 0.2em;
+}
+.display-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    /* row-gap: 1em; */
+    /* margin-top: 0.5em; */
+    align-items: center;
+}
+
+/* .display-btns > * {
+    display: flex;
+} */
+
+.display-btns label {
+    margin: 0 0.5em;
+}
+
+.time-btn {
+    --height: 0.7em;
+    height: var(--height);
+    width: 2em;
+    border: var(--border);
+    border-radius: calc(var(--height) / 2);
+}
+
+.lcd {
+    flex-grow: 1;
+    border: 0.2em solid var(--label-color);
+    border-radius: 0.5em;
+    /* margin: 0.2em; */
+}
+
+.btns-container {
+    padding-left: 0.5em;
+}
+
+.band-selectors {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.band-selectors > button {
+    --height: 1em;
+    height: var(--height);
+    width: 2em;
+    border-radius: calc(var(--height) / 2);
+}
+
+.band-selectors > label {
+}
