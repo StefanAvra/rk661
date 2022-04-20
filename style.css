@@ -40,6 +40,9 @@ button {
     appearance: none;
     border: var(--border);
     background-color: transparent;
+    cursor: pointer;
+    font-size: 0.7em;
+    color: var(--label-color);
 }
 
 .radio {
@@ -50,7 +53,7 @@ button {
     display: flex;
 }
 .speaker-container {
-    width: 45%;
+    width: 40%;
     display: grid;
     grid-template-areas:
         "a a"
@@ -80,12 +83,12 @@ button {
 
 .ui-container {
     width: 45%;
-    margin: 0.5em 1.5em 1.5em 0.5em;
+    margin: 0.5em 0 1.5em 0.5em;
 }
 
 .display-lens {
     border: 1px black solid;
-    border-radius: 0.5em;
+    border-radius: 0.2em;
     height: 8em;
     display: flex;
     padding: 0.2em;
@@ -121,22 +124,84 @@ button {
     border-radius: 0.5em;
     /* margin: 0.2em; */
 }
+.lcd > time {
+    font-style: italic;
+}
 
 .btns-container {
-    padding-left: 0.5em;
+    display: flex;
+    padding: 0.5em 0 0 0.5em;
+    justify-content: space-between;
 }
 
 .band-selectors {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    /* gap: 1em; */
+    justify-content: space-between;
 }
 
-.band-selectors > button {
+.band-selectors button {
     --height: 1em;
     height: var(--height);
     width: 2em;
     border-radius: calc(var(--height) / 2);
 }
 
-.band-selectors > label {
+.band-selectors > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.numeric-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding-top: 1em;
+}
+.numeric-btns > :last-child {
+    grid-column: 2/-1;
+}
+
+.numeric-btns > button {
+    --height: 1.5em;
+    height: var(--height);
+    width: 3em;
+    border-radius: calc(var(--height) / 2);
+}
+
+.freq-btns {
+    --height: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.freq-btns > button {
+    border-radius: calc(var(--height) / 2);
+}
+.freq-btns > label {
+    align-self: center;
+}
+button.tune {
+    height: 3em;
+    border-radius: 0.8em 0.8em 0 0;
+}
+.down {
+    transform: rotate(180deg) translateY(0.5em);
+}
+.power-container {
+    margin-top: 0.3em;
+}
+.power {
+    height: 1.3em;
+    width: 4em;
+    border-radius: 0 0.8em 0.8em 0;
+}
+
+.power .dot {
+    border-radius: 50%;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: darkred;
 }
